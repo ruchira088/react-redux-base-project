@@ -1,10 +1,13 @@
 import React from "react"
 import ReactDOM from "react-dom"
+import {Provider} from "react-redux"
 
-const Welcome = () => (
-	<div>
-		Welcome to Sooriyavilla
-	</div>
+import configureStore from "./reducers/configureStore"
+import Routes from "./Routes.jsx"
+
+ReactDOM.render(
+	<Provider store={configureStore()}>
+		<Routes/>
+	</Provider>, 
+	document.getElementById("app")
 )
-
-ReactDOM.render(<Welcome/>, document.getElementById("app"))
