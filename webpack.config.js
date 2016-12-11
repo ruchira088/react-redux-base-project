@@ -9,9 +9,13 @@ module.exports = {
 	},
 	devtool: "source-map",
 	resolve: {
-		root: path.join(__dirname, "front-end"),
+		root: [
+			path.join(__dirname),
+			path.join(__dirname, "front-end")
+		],
 		extensions: ["", ".webpack.js", ".web.js", ".js", ".jsx", ".scss"],
 		alias: {
+			home: "front-end",
 			styles: "styles",
 			assets: "assets",
 			components: "components",
