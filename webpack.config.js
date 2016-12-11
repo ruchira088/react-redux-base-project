@@ -8,6 +8,15 @@ module.exports = {
 		filename: "bundle.js"
 	},
 	devtool: "source-map",
+	resolve: {
+		root: path.join(__dirname, "front-end"),
+		alias: {
+			styles: "styles",
+			assets: "assets",
+			components: "components",
+			reducers: "reducers"
+		}
+	},
 	module: {
 		loaders: [
 			{
